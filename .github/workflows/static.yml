@@ -31,8 +31,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install project dependencies
         run: npm install
+
+      - name: Install TanStack Router CLI
+        run: npm install --no-save @tanstack/router-cli
 
       - name: Generate route tree
         run: npx tsr generate
